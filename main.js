@@ -21,13 +21,13 @@ const pAequorFactory = (specimenNum, dna) => {
 
     mutate(){
       let selectedBaseIndex = Math.floor(Math.random()*15);
-      console.log('The selected Base was ' + dna[selectedBaseIndex] + ' at index of ' + selectedBaseIndex);
+      console.log('The mutated base was ' + dna[selectedBaseIndex] + ' at index of ' + selectedBaseIndex);
       let newBase = '';
       do {
         newBase = returnRandBase();
-      } while (dna[selectedBaseIndex] === newBase);
-      dna[selectedBaseIndex] = newBase;
-      console.log('The selected Base is now ' + newBase);
+      } while (this.dna[selectedBaseIndex] === newBase);
+      this.dna[selectedBaseIndex] = newBase;
+      console.log('The mutated base is now ' + newBase);
     },
 
     compareDNA(specimen){
